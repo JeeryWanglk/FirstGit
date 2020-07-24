@@ -14,6 +14,7 @@ import android.graphics.drawable.Drawable;
 import android.util.AttributeSet;
 import android.widget.ImageView;
 
+//自定义View
 @SuppressLint("AppCompatCustomView")
 public class CircleImageView1 extends ImageView {
 
