@@ -18,7 +18,7 @@ import com.tencent.bugly.crashreport.CrashReport;
 
 import java.util.Calendar;
 
-
+// 这是主Activity
 public class MainActivity extends BaseActivity {
 
     private TextView five;
@@ -70,6 +70,7 @@ public class MainActivity extends BaseActivity {
     }
 
     public void openLandscapeActivity(View view) {
+        //被点击后异常 崩溃
         CrashReport.testJavaCrash();
         startActivity(new Intent(MainActivity.this, LandscapeActivity.class));
 
