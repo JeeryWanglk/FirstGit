@@ -1,0 +1,40 @@
+apply plugin: 'com.android.application'
+apply plugin: 'bugly'
+
+bugly {
+    appId = '93467a20ca' // 注册时分配的App ID
+    appKey = 'c52aa447-c936-4b73-84c8-166548222a17' // 注册时分配的App Key
+}
+
+android {
+    compileSdkVersion 28
+    defaultConfig {
+        applicationId "com.smarx.notchscreenutil2"
+        minSdkVersion 15
+        targetSdkVersion 28
+        versionCode 1
+        versionName "1.0"
+        ndk {
+            // 设置支持的SO库架构
+            abiFilters 'armeabi' , 'x86', 'armeabi-v7a', 'x86_64', 'arm64-v8a'
+        }
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'com.android.support:appcompat-v7:28.0.0'
+    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
+//    implementation 'me.jessyan:autosize:1.1.2'
+    implementation project(':notchlib')
+    implementation 'com.android.support:support-v4:28.0.0'
+    implementation  'com.tencent.bugly:crashreport:latest.release'
+    implementation  'com.tencent.bugly:nativecrashreport:latest.release' //其中latest.release指代最新Bugly NDK版本号，也可以指定明确的版本号，例如3.0
+
+}

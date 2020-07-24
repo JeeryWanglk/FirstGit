@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    android:background="#FFAFA9"
+    android:fitsSystemWindows="true"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/landscapeButton"
+        android:layout_width="388dp"
+        android:layout_height="wrap_content"
+        android:onClick="openLandscapeActivity"
+        android:text="Open LandscapeActivity"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        />
+
+    <Button
+        android:id="@+id/landscapeTwoButton"
+        android:layout_width="299dp"
+        android:layout_height="wrap_content"
+        android:onClick="openPortraitActivity"
+        android:text="Open PortraitActivity"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/landscapeButton" />
+    <Button
+        android:id="@+id/three"
+        android:layout_width="399dp"
+        android:layout_height="wrap_content"
+        android:onClick="openThress"
+        android:text="OPEN THREE"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/landscapeTwoButton" />
+    <Button
+        android:id="@+id/four"
+        android:layout_width="255dp"
+        android:layout_height="wrap_content"
+        android:onClick="openFour"
+        android:text="OPEN FOUR"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/three" />
+    <TextView
+        android:id="@+id/five"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:onClick="openFour"
+        android:text="OPEN FOUR"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/four" />
+    <TextView
+        android:id="@+id/six"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:onClick="openFour"
+        android:padding="60dp"
+        android:text="点这行会报错"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/four" />
+
+
+</LinearLayout>
